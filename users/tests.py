@@ -41,7 +41,7 @@ class SignupPageTests(TestCase):
     
     def test_signup_template(self):
         self.assertEqual(self.resp.status_code, 200)
-        self.assertTemplateUsed(self.resp, 'signup.html')
+        self.assertTemplateUsed(self.resp, 'registration/signup.html')
         self.assertContains(self.resp, 'Sign Up')
         self.assertNotContains(self.resp, 'Hi there! I should not be on the page.')
     
